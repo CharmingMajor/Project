@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="Design.css" rel ="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <p class="title">Register</p>
+      <form >
+          <label htmlFor="name" class="labels">Username</label><br/>
+          <input  class="Inputs "  id="username"/>
+          <br/>
+          <label htmlFor="email" class="labels">Email </label><br/>
+          <input  class="Inputs "   id="email"/>
+          <br/>
+          <label htmlFor="password" class="labels">Password </label><br/>
+          <input class="Inputs "  id="password"/>
+          <br/>
+          <button class="btn" type="submit" onclick="validation()"> Register</button><br/>
+          <p class="social">--- Register with social accounts ---</p><br/>
+          <div class="icons"> 
+            <p class="twitter"><i class="fab fa-google" ></i></p>
+            <p class="twitter"><i class="fab fa-twitter" ></i></p>
+            <p class="twitter"><i class="fab fa-github" ></i></p>
+           </div>
+      </form>
+    <br/>
+      
+      <button class="btn1" onclick="goToLoginPage()" >Already have an account<spam class="btn11"> Login</spam><b></b></button>
+      </div>
+  
+
+    <script>
+    function validation() {
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        if (username === "" || password === "" || email ==="") {
+            alert("Please fill in all fields.");
+            return 0; 
+        }
+        else{
+          alert("Successfully logging in!!")
+        }
+        return 1; 
+    }
+        function goToLoginPage() {
+  
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

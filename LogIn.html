@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="Design.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <p class="title"><b>Login</b></p>
+        <form class="login-form" >
+            <label class="labels" for="username">Username or email</label><br/>
+            <input class="Inputs" type="text" id="username" name="username" /><br/>
+            <label class="labels" for="password">Password</label><br/>
+            <input class="Inputs" type="password" id="password" name="password" /><br/>
+            <p class="forgot">Forgot Password?</p>
+            <button class="btn" type="submit" onclick="validation()">Sign In</button>
+            <p class="social">--- Login with social accounts ---</p><br/>
+            <div class="icons"> 
+                <p class="twitter"><i class="fab fa-google"></i></p>
+                <p class="twitter"><i class="fab fa-twitter"></i></p>
+                <p class="twitter"><i class="fab fa-github"></i></p>
+            </div>
+        </form>
+        <br/>
+        <button class="btn1" onclick="goToRegisterPage()">Don't have an account? <span class="btn11">Sign Up</span><b></b></button>
+    </div>
+  
+<script>
+    function validation() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username === "" || password === "") {
+            alert("Please fill in all fields.");
+            return false; 
+        }
+        else{
+          alert("Successfully logging in!!")
+        }
+        return 1; 
+    }
+function goToRegisterPage() {
+        window.location.href = "register.html";
+    }
+</script>
+</body>
+</html>
